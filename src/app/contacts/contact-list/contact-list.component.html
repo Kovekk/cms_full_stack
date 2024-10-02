@@ -12,14 +12,7 @@
     <div class="panel-body">
         <div class="row">
             <div class="col-xs-12">
-                <a href="#" class="list-group-item clearfix" *ngFor="let contact of contacts">
-                    <div class="pull-left">
-                        <p>{{ contact.name }}</p>
-                    </div>
-                    <div class="pull-right">
-                        <img alt="{{ contact.name }}" src="{{ contact.imageUrl }}" class="img-responsive" style="max-height: 70px;">
-                    </div>
-                </a>
+                <cms-contact-item *ngFor="let current_contact of contacts" [contact]="current_contact" (click)="onSelected(current_contact)"></cms-contact-item>
             </div>
         </div>
     </div>
